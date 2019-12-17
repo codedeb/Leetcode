@@ -1,8 +1,8 @@
 def subsets(nums):
-    if len(nums) == 0:
+    if len(nums) == 0:# recursive base case
         return [[]]
     else:
-        sub = subsets(nums[1:])
+        sub = subsets(nums[1:]) # spliting into subproblems
         res = []
         word = nums[0]
         for i in sub:
