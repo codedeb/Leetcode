@@ -1,12 +1,12 @@
 def quicksort(list):
-    #recursive 
-    if len(list) <= 1: # base case for recursive call
+    # recursive
+    if len(list) <= 1:  # base case for recursive call
         return list
     else:
-        pivot = list.pop() # Taking last element of the list as pivot
+        pivot = list.pop()  # Taking last element of the list as pivot
 
-    greaterthanpivot = [] # values greater than pivot
-    lesserthanpivot = [] # values smaller than pivot
+    greaterthanpivot = []  # values greater than pivot
+    lesserthanpivot = []  # values smaller than pivot
 
     for i in list:
         if i < pivot:
@@ -14,7 +14,7 @@ def quicksort(list):
         else:
             greaterthanpivot.append(i)
 
-    return quicksort(lesserthanpivot) + [pivot] + quicksort(greaterthanpivot) # calling recursively
+    return quicksort(greaterthanpivot) + [pivot] + quicksort(lesserthanpivot)  # calling recursively
 
 
 a = quicksort([3, 1, 7, 6])
