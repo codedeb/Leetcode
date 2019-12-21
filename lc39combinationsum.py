@@ -15,5 +15,5 @@ def combinationSum(candidates, target):
     return arr
 
 
-a = combinationSum([2, 3, 6, 7], 7)
+a = combinationSum([2, 3, 6, 7, 8], 7)
 print(a)
